@@ -1,0 +1,79 @@
+@import "compass/css3/transition";
+
+$bp-small:  24em;
+$bp-med:    46.8em;
+$bp-large:  50em;
+$bp-xl:     60em;
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #333;
+}
+
+header {
+  padding: 35px 10px;
+  > a {
+    > svg {
+      width: 80px;
+      height: 80px;
+      fill: rgba(255, 255, 255, 0.15);
+      //@include transition(all, ease-in-out 0.5);
+    }
+
+    &:hover {
+      > svg {
+        fill: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
+
+#container {
+  width: 100%;
+}
+
+.grid-sizer {
+  width: 25%;
+}
+
+.item {
+  width: 50%;
+  margin-bottom: 10px;
+
+  &.w2 {
+    width: 25%;
+  }
+}
+
+.gutter-sizer {
+  width: 3%;
+}
+
+img {
+  width: 100%;
+}
+
+@media all and (min-width: $bp-large) {
+  #container {
+    width: 100%;
+    margin: 0 10px;
+  }
+
+  .grid-sizer {
+    width: 10%;
+  }
+
+  .item {
+    width: 20%;
+  
+
+  &.w2 {
+      width: 10%;
+    }
+  }
+}

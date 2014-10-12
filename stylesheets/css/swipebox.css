@@ -1,0 +1,252 @@
+/*! Swipebox v1.2.8 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox */
+/* line 19, ../sass/swipebox.scss */
+html.swipebox-html.swipebox-touch {
+  overflow: hidden !important;
+}
+
+/* line 23, ../sass/swipebox.scss */
+#swipebox-overlay img {
+  border: none !important;
+}
+
+/* line 27, ../sass/swipebox.scss */
+#swipebox-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999 !important;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* line 38, ../sass/swipebox.scss */
+#swipebox-slider {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  white-space: nowrap;
+  position: absolute;
+  display: none;
+}
+/* line 47, ../sass/swipebox.scss */
+#swipebox-slider .slide {
+  background: url(img/loader.gif) no-repeat center center;
+  height: 100%;
+  width: 100%;
+  line-height: 1px;
+  text-align: center;
+  display: inline-block;
+}
+/* line 55, ../sass/swipebox.scss */
+#swipebox-slider .slide:before {
+  content: "";
+  display: inline-block;
+  height: 50%;
+  width: 1px;
+  margin-right: -1px;
+}
+/* line 63, ../sass/swipebox.scss */
+#swipebox-slider .slide img, #swipebox-slider .slide .swipebox-video-container {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+}
+/* line 74, ../sass/swipebox.scss */
+#swipebox-slider .slide .swipebox-video-container {
+  background: none;
+  max-width: 1140px;
+  max-height: 100%;
+  width: 100%;
+  padding: 5%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+/* line 84, ../sass/swipebox.scss */
+#swipebox-slider .slide .swipebox-video-container .swipebox-video {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+/* line 90, ../sass/swipebox.scss */
+#swipebox-slider .slide .swipebox-video-container .swipebox-video iframe {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 103, ../sass/swipebox.scss */
+#swipebox-action,
+#swipebox-caption {
+  position: absolute;
+  left: 0;
+  z-index: 999;
+  height: 50px;
+  width: 100%;
+}
+
+/* line 111, ../sass/swipebox.scss */
+#swipebox-action {
+  bottom: -50px;
+}
+/* line 114, ../sass/swipebox.scss */
+#swipebox-action.visible-bars {
+  -moz-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
+/* line 123, ../sass/swipebox.scss */
+#swipebox-action #swipebox-prev,
+#swipebox-action #swipebox-next,
+#swipebox-action #swipebox-close {
+  background-image: url(img/icons.png);
+  background-repeat: no-repeat;
+  border: none !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+}
+/* line 135, ../sass/swipebox.scss */
+#swipebox-action #swipebox-prev {
+  background-position: -32px 13px;
+  right: 100px;
+}
+/* line 140, ../sass/swipebox.scss */
+#swipebox-action #swipebox-next {
+  background-position: -78px 13px;
+  right: 40px;
+}
+/* line 145, ../sass/swipebox.scss */
+#swipebox-action #swipebox-close {
+  background-position: 15px 12px;
+  left: 40px;
+}
+/* line 152, ../sass/swipebox.scss */
+#swipebox-action #swipebox-prev.disabled,
+#swipebox-action #swipebox-next.disabled {
+  opacity: 0.3;
+}
+
+/* line 158, ../sass/swipebox.scss */
+#swipebox-caption {
+  top: -50px;
+  text-align: center;
+}
+/* line 162, ../sass/swipebox.scss */
+#swipebox-caption.visible-bars {
+  -moz-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+}
+
+/* line 170, ../sass/swipebox.scss */
+#swipebox-slider.rightSpring {
+  animation: rightSpring 0.3s;
+}
+
+/* line 174, ../sass/swipebox.scss */
+#swipebox-slider.leftSpring {
+  animation: leftSpring 0.3s;
+}
+
+@keyframes rightSpring {
+  /* line 179, ../sass/swipebox.scss */
+  0% {
+    margin-left: 0px;
+  }
+
+  /* line 183, ../sass/swipebox.scss */
+  50% {
+    margin-left: -30px;
+  }
+
+  /* line 187, ../sass/swipebox.scss */
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes leftSpring {
+  /* line 193, ../sass/swipebox.scss */
+  0% {
+    margin-left: 0px;
+  }
+
+  /* line 197, ../sass/swipebox.scss */
+  50% {
+    margin-left: 30px;
+  }
+
+  /* line 201, ../sass/swipebox.scss */
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* line 207, ../sass/swipebox.scss */
+  #swipebox-action #swipebox-close {
+    left: 0;
+  }
+
+  /* line 211, ../sass/swipebox.scss */
+  #swipebox-action #swipebox-prev {
+    right: 60px;
+  }
+
+  /* line 215, ../sass/swipebox.scss */
+  #swipebox-action #swipebox-next {
+    right: 0;
+  }
+}
+/* Skin 
+--------------------------*/
+/* line 222, ../sass/swipebox.scss */
+#swipebox-overlay {
+  background: #0d0d0d;
+}
+
+/* line 227, ../sass/swipebox.scss */
+#swipebox-action,
+#swipebox-caption {
+  text-shadow: 1px 1px 1px black;
+  background-color: #0d0d0d;
+  background-color: #0d0d0d;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0d0d0d), to(black));
+  background-image: -webkit-linear-gradient(top, #0d0d0d, black);
+  background-image: -moz-linear-gradient(top, #0d0d0d, black);
+  background-image: -o-linear-gradient(top, #0d0d0d, black);
+  background-image: linear-gradient(to bottom, #0d0d0d, #000000);
+  opacity: 0.95;
+}
+
+/* line 233, ../sass/swipebox.scss */
+#swipebox-action {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* line 237, ../sass/swipebox.scss */
+#swipebox-caption {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: white !important;
+  font-size: 15px;
+  line-height: 43px;
+  font-family: Helvetica, Arial, sans-serif;
+}

@@ -1,0 +1,78 @@
+/* line 8, ../sass/custom.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 14, ../sass/custom.scss */
+body {
+  background: #333;
+}
+
+/* line 18, ../sass/custom.scss */
+header {
+  padding: 35px 10px;
+}
+/* line 21, ../sass/custom.scss */
+header > a > svg {
+  width: 80px;
+  height: 80px;
+  fill: rgba(255, 255, 255, 0.15);
+}
+/* line 29, ../sass/custom.scss */
+header > a:hover > svg {
+  fill: rgba(255, 255, 255, 0.2);
+}
+
+/* line 36, ../sass/custom.scss */
+#container {
+  width: 100%;
+}
+
+/* line 40, ../sass/custom.scss */
+.grid-sizer {
+  width: 25%;
+}
+
+/* line 44, ../sass/custom.scss */
+.item {
+  width: 50%;
+  margin-bottom: 10px;
+}
+/* line 48, ../sass/custom.scss */
+.item.w2 {
+  width: 25%;
+}
+
+/* line 53, ../sass/custom.scss */
+.gutter-sizer {
+  width: 3%;
+}
+
+/* line 57, ../sass/custom.scss */
+img {
+  width: 100%;
+}
+
+@media all and (min-width: 50em) {
+  /* line 62, ../sass/custom.scss */
+  #container {
+    width: 100%;
+    margin: 0 10px;
+  }
+
+  /* line 67, ../sass/custom.scss */
+  .grid-sizer {
+    width: 10%;
+  }
+
+  /* line 71, ../sass/custom.scss */
+  .item {
+    width: 20%;
+  }
+  /* line 75, ../sass/custom.scss */
+  .item.w2 {
+    width: 10%;
+  }
+}
