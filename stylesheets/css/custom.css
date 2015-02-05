@@ -1,77 +1,135 @@
-/* line 8, ../sass/custom.scss */
+/* line 6, ../sass/custom.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 14, ../sass/custom.scss */
+/* line 12, ../sass/custom.scss */
 body {
+  position: relative;
   background: #333;
+  font-family: 'Droid Sans', sans-serif;
 }
 
 /* line 18, ../sass/custom.scss */
+h1 {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  font-size: 42px;
+  line-height: 1.2em;
+  margin-top: 0;
+}
+
+/* line 27, ../sass/custom.scss */
+p,
+ul {
+  color: #CCC;
+}
+
+/* line 31, ../sass/custom.scss */
+a {
+  color: #F5A422;
+}
+
+/* line 35, ../sass/custom.scss */
 header {
+  position: relative;
+  z-index: 2;
   padding: 35px 10px;
 }
-/* line 21, ../sass/custom.scss */
-header > a > svg {
+/* line 39, ../sass/custom.scss */
+header svg {
   width: 80px;
   height: 80px;
   fill: rgba(255, 255, 255, 0.15);
 }
-/* line 29, ../sass/custom.scss */
-header > a:hover > svg {
-  fill: rgba(255, 255, 255, 0.2);
+/* line 45, ../sass/custom.scss */
+header a:hover > svg {
+  fill: rgba(255, 255, 255, 0.25);
 }
 
-/* line 36, ../sass/custom.scss */
+/* line 50, ../sass/custom.scss */
+.nav {
+  display: block;
+  float: right;
+  padding: 30px 20px 0 0;
+  text-decoration: none;
+}
+/* line 57, ../sass/custom.scss */
+.nav:hover, .nav.active {
+  text-decoration: underline;
+}
+
+/* line 63, ../sass/custom.scss */
+.biography .intro {
+  padding: 0 20px 20px 20px;
+}
+
+/* line 68, ../sass/custom.scss */
 #container {
   width: 100%;
 }
 
-/* line 40, ../sass/custom.scss */
+/* line 72, ../sass/custom.scss */
 .grid-sizer {
   width: 25%;
 }
 
-/* line 44, ../sass/custom.scss */
+/* line 76, ../sass/custom.scss */
 .item {
   width: 50%;
   margin-bottom: 10px;
 }
-/* line 48, ../sass/custom.scss */
+/* line 80, ../sass/custom.scss */
 .item.w2 {
   width: 25%;
 }
 
-/* line 53, ../sass/custom.scss */
+/* line 85, ../sass/custom.scss */
 .gutter-sizer {
   width: 3%;
 }
 
-/* line 57, ../sass/custom.scss */
+/* line 89, ../sass/custom.scss */
 img {
   width: 100%;
 }
 
 @media all and (min-width: 50em) {
-  /* line 62, ../sass/custom.scss */
+  /* line 96, ../sass/custom.scss */
+  .biography .intro {
+    padding: 0 60px 20px 60px;
+  }
+
+  /* line 101, ../sass/custom.scss */
   #container {
     width: 100%;
     margin: 0 10px;
   }
 
-  /* line 67, ../sass/custom.scss */
+  /* line 106, ../sass/custom.scss */
+  .intro__section-work {
+    float: left;
+    width: 45%;
+  }
+
+  /* line 111, ../sass/custom.scss */
+  .intro__section-skills {
+    float: right;
+    width: 45%;
+  }
+
+  /* line 116, ../sass/custom.scss */
   .grid-sizer {
     width: 10%;
   }
 
-  /* line 71, ../sass/custom.scss */
+  /* line 120, ../sass/custom.scss */
   .item {
     width: 20%;
   }
-  /* line 75, ../sass/custom.scss */
+  /* line 124, ../sass/custom.scss */
   .item.w2 {
     width: 10%;
   }

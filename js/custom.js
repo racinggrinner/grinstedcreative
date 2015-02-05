@@ -1,10 +1,14 @@
 $( document ).ready(function() {
 
-	$('#container').masonry({
+	var $container = $('#container').masonry({
 		"gutter": 'gutter-sizer',
   	columnWidth: '.grid-sizer',
   	itemSelector: '.item'
  	});
+
+	$container.imagesLoaded( function() {
+  	$container.masonry();
+	});
 
  	$('.swipebox').swipebox({
 		useCSS : true, // false will force the use of jQuery for animations
